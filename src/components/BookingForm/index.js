@@ -12,7 +12,7 @@ const BookingForm = ({ availableTimes, dispatch, formik }) => {
         <h1>Book Now</h1>
       </Top>
       <Form onSubmit={formik.handleSubmit} noValidate>
-        <label htmlFor="res-date">Choose Date</label>
+        <label htmlFor="res-date">Choose Date*</label>
         <input
           type="date"
           data-testid="res-date"
@@ -24,7 +24,7 @@ const BookingForm = ({ availableTimes, dispatch, formik }) => {
         <FormMessageError data-testid="res-date-error">
           {formik.touched.date && formik.errors.date}
         </FormMessageError>
-        <label htmlFor="res-time">Choose Time</label>
+        <label htmlFor="res-time">Choose Time*</label>
         <select
           data-testid="res-time"
           id="res-time"
@@ -40,7 +40,7 @@ const BookingForm = ({ availableTimes, dispatch, formik }) => {
         <FormMessageError data-testid="res-time-error">
           {formik.touched.time && formik.errors.time}
         </FormMessageError>
-        <label htmlFor="guests">Number of guests</label>
+        <label htmlFor="guests">Number of guests*</label>
         <input
           data-testid="guests"
           type="number"
@@ -53,7 +53,7 @@ const BookingForm = ({ availableTimes, dispatch, formik }) => {
         <FormMessageError data-testid="guests-error">
           {formik.touched.guests && formik.errors.guests}
         </FormMessageError>
-        <label htmlFor="occasion">Occasion</label>
+        <label htmlFor="occasion">Occasion*</label>
         <select
           data-testid="occasion"
           id="occasion"
