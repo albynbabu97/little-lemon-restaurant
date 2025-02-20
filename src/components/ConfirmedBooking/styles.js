@@ -59,5 +59,8 @@ export const Confirmation = styled.div`
 
   span {
     text-transform: capitalize;
+    max-width: 100%;
+    word-break: break-word;
+    overflow-wrap: break-word;
   }
 `;
