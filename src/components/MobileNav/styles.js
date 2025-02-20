@@ -43,7 +43,7 @@ export const Menu = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  padding: 5rem 0;
+  padding: 8rem 0;
   transition: transform 0.3s ease-in-out;
   transform: translateX(-100%);
   overflow: hidden;
@@ -53,7 +53,8 @@ export const Menu = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: flex-start;
+    gap: 2rem;
     list-style: none;
     font-weight: ${({ theme }) => theme.font.weight.bold};
   }

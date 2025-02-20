@@ -2,7 +2,6 @@ import styled from "styled-components";
 
 export const Container = styled.button`
   width: 100%;
-  height: 5rem;
   border-radius: ${({ theme }) => theme.border.radius};
   display: flex;
   justify-content: center;
@@ -12,7 +11,12 @@ export const Container = styled.button`
   background-color: ${({ theme }) => theme.colors.secondary};
   font-size: ${({ theme }) => theme.font.size.medium};
   font-weight: ${({ theme }) => theme.font.weight.bold};
-  padding: 0 1.3rem;
+  padding: 1.2rem 2rem;
+  transition: all 0.3s ease;
+
+  &:hover {
+    background-color: ${({ theme }) => theme.colors.secondary};
+  }
 
   :active {
     box-shadow: inset 0px 5px 4px rgba(0, 0, 0, 0.25);

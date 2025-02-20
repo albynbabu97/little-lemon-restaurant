@@ -10,7 +10,9 @@ const Specials = (props) => {
     <Container {...props} id="menu">
       <Top>
         <h1>This weeks specials!</h1>
-        <Button>Online Menu</Button>
+        <Button aria-label="Online Menu" style={{ pointerEvents: "none" }}>
+          Online Menu
+        </Button>
       </Top>
       <Cards>
         <SpecialFoodCard

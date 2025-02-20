@@ -1,17 +1,19 @@
-import { HashLink } from "react-router-hash-link";
 import { Container } from "./styles";
 import logoImg from "../../assets/Logo.svg";
 import basketImg from "../../assets/basket.svg";
+import { HashLink } from "react-router-hash-link";
 
 const Nav = (props) => {
   return (
     <Container {...props}>
+      <div className="logo-container">
+        <a href="/">
+          <img src={logoImg} alt="Little Lemon Logo" />
+        </a>
+      </div>
       <ul>
         <li>
-          <img src={logoImg} alt="Little Lemon Logo" />
-        </li>
-        <li>
-          <HashLink to="/">Home</HashLink>
+          <a href="/">Home</a>
         </li>
         <li>
           <HashLink to="/#about">About</HashLink>
@@ -20,12 +22,17 @@ const Nav = (props) => {
           <HashLink to="/#menu">Menu</HashLink>
         </li>
         <li>
-          <HashLink to="/bookings">Reservations</HashLink>
+          <a href="/bookings">Reservations</a>
         </li>
         <li className="orderBtn">
-          <HashLink role="button" to="#">
+          <a
+            role="button"
+            href="/order"
+            aria-label="Order Online"
+            style={{ pointerEvents: "none" }}
+          >
             Order Online
-          </HashLink>
+          </a>
         </li>
         <li>
           <img className="basketIcon" src={basketImg} alt="Basket" />

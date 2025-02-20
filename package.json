@@ -1,5 +1,6 @@
 {
   "name": "little-lemon-restaurant",
+  "author": "Albyn Babu",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

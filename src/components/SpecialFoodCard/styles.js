@@ -18,6 +18,12 @@ export const Container = styled.div`
   border-radius: ${({ theme }) => theme.border.radius}
     ${({ theme }) => theme.border.radius} 0 0;
   gap: 1.6rem;
+  box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.25);
+  transition: all 0.3s ease;
+
+  &:hover {
+    transform: scale(1.05);
+  }
 `;
 
 export const Image = styled.img`
@@ -57,9 +63,11 @@ export const CallToAction = styled.div`
   align-items: center;
   gap: 1.8rem;
   padding: 0 1.6rem 2rem 1.6rem;
+  background-color: transparent;
 
   .highlight {
     font-weight: ${({ theme }) => theme.font.weight.bold};
     border: none;
+    background-color: transparent;
   }
 `;

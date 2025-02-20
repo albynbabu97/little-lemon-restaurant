@@ -1,19 +1,19 @@
 import { Container } from "./styles";
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
-import CallToAction from "../../components/CallToAction";
+import Banner from "../../components/Banner";
 import Specials from "../../components/Specials";
 import CustomersSay from "../../components/CustomersSay";
-import Chicago from "../../components/Chicago";
+import About from "../../components/About";
 
 const Home = () => {
   return (
     <Container>
       <Header />
-      <CallToAction />
+      <Banner />
       <Specials />
       <CustomersSay />
-      <Chicago />
+      <About />
       <Footer />
     </Container>
   );

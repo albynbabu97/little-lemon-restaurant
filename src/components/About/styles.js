@@ -1,8 +1,7 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  width: 66%;
-  height: 100vh;
+  width: 80%;
   min-height: 65.1rem;
   display: flex;
   justify-content: space-between;
@@ -23,10 +22,14 @@ export const Container = styled.div`
 `;
 
 export const Content = styled.div`
-  width: 28rem;
+  width: 50%;
   height: fit-content;
   display: flex;
   flex-direction: column;
+
+  @media (max-width: 966px) {
+    width: 100%;
+  }
 
   h1 {
     color: ${({ theme }) => theme.colors.primary};
@@ -42,6 +45,7 @@ export const Content = styled.div`
     max-width: 28rem;
     margin: 2rem 0;
     color: ${({ theme }) => theme.colors.primary};
+    line-height: 22px;
   }
 
   @media (max-width: 966px) {
@@ -53,9 +57,10 @@ export const Content = styled.div`
 export const Image = styled.div`
   width: fit-content;
   display: flex;
-  justify-content: flex-start;
-  align-items: flex-start;
+  justify-content: center;
+  align-items: center;
   position: relative;
+  width: 50%;
 
   img {
     object-fit: cover;
@@ -64,10 +69,9 @@ export const Image = styled.div`
   }
 
   img:first-of-type {
-    left: -12rem;
-    top: 12rem;
+    left: -0rem;
+    top: 8rem;
     z-index: 2;
-    /* border: 5px solid red; */
     position: absolute;
   }
 

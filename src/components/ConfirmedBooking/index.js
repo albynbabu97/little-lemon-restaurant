@@ -24,7 +24,7 @@ const ConfirmedBooking = (props) => {
       </Top>
       {booking && (
         <Confirmation>
-          <h2>Confirmation details</h2>
+          <h2>Confirmation Details</h2>
           <span>
             <strong>Occasion:</strong> {booking.occasion}
           </span>
@@ -37,6 +37,9 @@ const ConfirmedBooking = (props) => {
           <span>
             <strong>Time:</strong> {booking.time}
           </span>
+          <span>
+            <strong>Special Requests:</strong> {booking.notes}
+          </span>
         </Confirmation>
       )}
 
@@ -44,7 +47,7 @@ const ConfirmedBooking = (props) => {
         aria-label="Go back to the home page"
         onClick={() => navigate("/")}
       >
-        Back to home
+        Back to Home
       </Button>
     </Container>
   );

@@ -15,6 +15,7 @@ const BookingForm = (props) => {
       time: availableTimes.times[0],
       guests: 1,
       occasion: "birthday",
+      notes: "",
     },
     onSubmit: (values) => {
       const response = submitAPI(values);
@@ -49,20 +50,23 @@ const BookingForm = (props) => {
         <h1>Book Now</h1>
       </Top>
       <Form onSubmit={formik.handleSubmit} noValidate>
-        <label htmlFor="res-date">Choose date</label>
+        <label htmlFor="res-date">Choose Date</label>
         <input
           type="date"
           data-testid="res-date"
           id="res-date"
+          placeholder="Choose Date"
+          min={new Date().toLocaleDateString("en-CA")}
           {...formik.getFieldProps("date")}
         />
         <FormMessageError data-testid="res-date-error">
           {formik.touched.date && formik.errors.date}
         </FormMessageError>
-        <label htmlFor="res-time">Choose time</label>
+        <label htmlFor="res-time">Choose Time</label>
         <select
           data-testid="res-time"
           id="res-time"
+          placeholder="Choose Time"
           {...formik.getFieldProps("time")}
         >
           {availableTimes.times.map((time) => (
@@ -106,6 +110,14 @@ const BookingForm = (props) => {
         <FormMessageError data-testid="occasion-error">
           {formik.touched.occasion && formik.errors.occasion}
         </FormMessageError>
+        <label htmlFor="notes">Special requests</label>
+        <textarea
+          name="notes"
+          id="notes"
+          placeholder="Special requests"
+          {...formik.getFieldProps("notes")}
+          rows={4}
+        ></textarea>
         <input
           data-testid="submit-btn"
           type="submit"

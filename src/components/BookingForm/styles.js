@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  width: 66%;
+  width: 80%;
   height: auto;
   min-height: 70.6rem;
   display: flex;
@@ -41,19 +41,20 @@ export const Form = styled.form`
   display: grid;
   width: 100%;
   max-width: 500px;
-  gap: 20px;
+  gap: 14px;
   font-size: ${({ theme }) => theme.font.size.large};
 
   > input,
-  select {
+  select,
+  textarea {
     font-size: ${({ theme }) => theme.font.size.medium};
     width: 100%;
-    height: 8rem;
     border-radius: 0.5rem;
     outline: none;
-    padding: 0 1.5rem;
+    padding: 1.2rem 2rem;
     color: ${({ theme }) => theme.colors.primary};
-    font-weight: ${({ theme }) => theme.font.weight.extrabold};
+    font-weight: 500;
+    font-size: 1.6rem;
     background-color: #edefee;
     border: none;
   }
@@ -93,5 +94,5 @@ export const Form = styled.form`
 
 export const FormMessageError = styled.span`
   color: red;
-  margin-top: -2rem;
+  font-size: 1.4rem;
 `;

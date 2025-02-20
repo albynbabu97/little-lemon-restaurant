@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { Container, Content, Image } from "./styles";
 import restaurant_food from "../../assets/restaurantfood.jpg";
 
-const CallToAction = (props) => {
+const Banner = (props) => {
   const navigate = useNavigate();
 
   return (
@@ -12,8 +12,9 @@ const CallToAction = (props) => {
         <h1>Little Lemon</h1>
         <h2>Chicago</h2>
         <p className="lead-txt">
-          We are family owned Mediterranean restaurant, focused on traditional
-          recipes served with a modern twist.
+          Experience the flavors of the Mediterranean at Little Lemon. Book your
+          table or order online for authentic dishes made with fresh
+          ingredients.
         </p>
         <Button
           onClick={() => navigate("/bookings")}
@@ -29,4 +30,4 @@ const CallToAction = (props) => {
   );
 };
 
-export default CallToAction;
+export default Banner;

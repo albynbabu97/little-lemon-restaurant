@@ -11,7 +11,9 @@ const SpecialFoodCard = ({ imageUrl, title, price, description, ...props }) => {
       </Header>
       <Body>{description}</Body>
       <CallToAction>
-        <button className="highlight">Order a delivery</button>
+        <button className="highlight" aria-label="Order a delivery">
+          Order a delivery
+        </button>
         <img src={deliveryIcon} alt="Delivery" />
       </CallToAction>
     </Container>

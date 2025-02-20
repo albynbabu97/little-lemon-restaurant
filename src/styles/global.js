@@ -1,8 +1,10 @@
 import { createGlobalStyle } from "styled-components";
 
-export default createGlobalStyle`
+const GlobalStyle = createGlobalStyle`
   :root {
     font-size: 62.5%;
+    --header-height: 12.8rem;
+    --header-height-mobile: 8rem;
   };
 
   * {
@@ -10,6 +12,10 @@ export default createGlobalStyle`
     padding: 0;
     box-sizing: border-box;
   };
+
+  html {
+    scroll-behavior: smooth;
+  }
 
   body {
     background-color: ${({ theme }) => theme.colors.white};
@@ -79,3 +85,5 @@ export default createGlobalStyle`
     filter: brightness(.9);
   };
 `;
+
+export default GlobalStyle;

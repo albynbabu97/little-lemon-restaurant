@@ -1,62 +1,35 @@
 import styled from "styled-components";
 
 export const Container = styled.footer`
-  width: 66%;
-  height: 45.7rem;
+  padding: 4rem 0;
+  width: 100%;
   display: flex;
+  height: 44vh;
   flex-direction: column;
-  gap: 3rem;
+  gap: 8rem;
   color: ${({ theme }) => theme.colors.white};
-
-  ::before {
-    content: "";
-    width: 100%;
-    height: 45.7rem;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    background-color: ${({ theme }) => theme.colors.primary};
-    z-index: -1;
-
-    @media (max-width: 840px) {
-      height: 40rem;
-    }
-
-    @media (max-width: 700px) {
-      height: 90rem;
-    }
-
-    @media (max-width: 337px) {
-      height: 95rem;
-    }
-  }
-
-  @media (max-width: 1120px) {
-    width: 90%;
-  }
-
-  @media (max-width: 840px) {
-    height: 40rem;
-  }
+  background-color: ${({ theme }) => theme.colors.highlight_dark};
 
   @media (max-width: 700px) {
-    height: 90rem;
-  }
-
-  @media (max-width: 337px) {
-    height: 95rem;
+    height: 72rem;
   }
 `;
 
 export const Content = styled.div`
-  width: 100%;
+  width: 80%;
+  margin: 0 auto;
   height: fit-content;
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
 
+  @media (max-width: 1120px) {
+    width: 90%;
+  }
+
   @media (max-width: 700px) {
     flex-direction: column;
+    gap: 2rem;
   }
 `;
 
@@ -67,8 +40,10 @@ export const Copyright = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 0.5rem;
+  gap: 1rem;
   text-align: center;
+  border-top: 1px solid ${({ theme }) => theme.colors.white};
+  padding: 2rem 0;
 
   a {
     text-decoration: underline;
@@ -76,28 +51,32 @@ export const Copyright = styled.div`
   }
 `;
 
-export const Image = styled.img`
-  width: 15.5rem;
-  height: 32.1rem;
-  object-fit: cover;
-  margin-top: 4.8rem;
-  border-radius: 0.5rem;
+export const ImageContainer = styled.div`
+  flex: 0 1 20%;
+  position: relative;
+  overflow: hidden;
+  height: 100%;
+`;
 
-  @media (max-width: 840px) {
-    display: none;
-  }
+export const Image = styled.img`
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 `;
 
 export const Column = styled.div`
   display: flex;
+  flex: 0 1 20%;
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
   gap: 1.5rem;
-  margin-top: 7.7rem;
 
   h4 {
-    height: 4.32rem;
+    font-size: ${({ theme }) => theme.font.size.medium};
   }
 
   ul {
@@ -105,10 +84,29 @@ export const Column = styled.div`
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
-    gap: 1.5rem;
+    gap: 1.2rem;
 
     li {
       list-style: none;
+      font-size: ${({ theme }) => theme.font.size.small};
     }
+  }
+`;
+
+export const Address = styled.address`
+  font-size: ${({ theme }) => theme.font.size.small};
+  line-height: 24px;
+`;
+
+export const SocialMedia = styled.ul`
+  display: flex;
+  flex-direction: row !important;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 1.5rem;
+
+  li {
+    list-style: none;
+    font-size: ${({ theme }) => theme.font.size.small};
   }
 `;

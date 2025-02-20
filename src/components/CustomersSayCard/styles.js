@@ -1,13 +1,13 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  width: 20rem;
+  width: 24rem;
   height: 40.5rem;
   color: ${({ theme }) => theme.colors.black};
   background-color: ${({ theme }) => theme.colors.white};
   border-radius: ${({ theme }) => theme.border.radius};
   padding: 2.6rem 2.4rem;
-
+  box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.25);
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
@@ -46,6 +46,10 @@ export const Testimonial = styled.p`
   height: auto;
   text-overflow: ellipsis;
   overflow: hidden;
+  font-style: italic;
+  line-height: 20px;
+  color: ${({ theme }) => theme.colors.primary};
+  font-size: ${({ theme }) => theme.font.size.small};
 
   ::before {
     content: open-quote;
