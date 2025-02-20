@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  width: 26rem;
+  width: 30%;
   height: 43.9rem;
   display: grid;
   grid-template-rows: 19.1rem repeat(3, auto);
@@ -20,6 +20,10 @@ export const Container = styled.div`
   gap: 1.6rem;
   box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.25);
   transition: all 0.3s ease;
+
+  @media (max-width: 768px) {
+    width: 100%;
+  }
 
   &:hover {
     transform: scale(1.05);
